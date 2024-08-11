@@ -51,24 +51,24 @@
       <nav id="navmenu" class="navmenu justify-content-center">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="resume.html">Resume</a></li>
+          <li><a href="about.html">About me</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li class="dropdown"><a href="#"><span>Certificates</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="https://s3.ap-southeast-1.amazonaws.com/emilyprofile.com/NUS_ISS+Open+Cert.pdf">Graduate Diploma in Systems Analysis</a></li>
+              <li><a href="certs.html#issCert">Graduate Diploma in Systems Analysis</a></li>
               <li class="dropdown"><a href="#"><span>Graduate Certificate in Digital Solutions Development</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <li><a href="https://credentials.nus.edu.sg/65ffb486-d1e8-4152-93be-5d0e65153039">Foundations</a></li>
-                  <li><a href="https://credentials.nus.edu.sg/6c162b6c-3265-4449-a87f-379287b08ee0">Design</a></li>
+                  <li><a href="certs.html#foundations">Foundations</a></li>
+                  <li><a href="certs.html#design">Design</a></li>
                   <li><a href="#">Web Applications</a></li>
                   <li><a href="#">Machine Learning Applications</a></li>
                   <li><a href="#">Mobile Applications</a></li>
                 </ul>
               </li>
-              <li><a href="https://s3.ap-southeast-1.amazonaws.com/emilyprofile.com/BA+Business+Admin.pdf">BA(Hons)Business Administration</a></li>
-              <li><a href="https://s3.ap-southeast-1.amazonaws.com/emilyprofile.com/Dip+in+Accounting.pdf">Diploma in Accounting & Management</a></li>
+              <li><a href="certs.html#baHons">BA(Hons)Business Administration</a></li>
+              <li><a href="certs.html#dipAcc">Diploma in Accounting & Management</a></li>
               <li><a href="#">BA English</a></li>
-              <li><a href="https://s3.ap-southeast-1.amazonaws.com/emilyprofile.com/NCC+Dip.pdf">Diploma in Computer Studies</a></li>
+              <li><a href="certs.html#dipCs">Diploma in Computer Studies</a></li>
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
@@ -78,6 +78,7 @@
     </div>
   </header>
 
+
   <main class="main">
 
     <!-- Contact Section -->
@@ -86,7 +87,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+       
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -100,32 +101,34 @@
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <p>Blk 21, Jalan Membina, 163021</p>
                 </div>
               </div><!-- End Info Item -->
 
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
+                  <h3>Mobile</h3>
+                  <p>+65 97242807</p>
                 </div>
               </div><!-- End Info Item -->
 
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
+                  <h3>Email</h3>
+                  <p>e1114079@u.nus.edu</p>
                 </div>
               </div><!-- End Info Item -->
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.25914214703!2d103.81529877300981!3d1.2850984316115828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da197e97872f8b%3A0xfea0a6247fdb7576!2sSingapore%20163021!5e0!3m2!1sen!2sus!4v1723369030703!5m2!1sen!2sus" 
+              frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             
             </div>
           </div>
 
           <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <input type="hidden" name="access_key" value="3ad8aba2-d09f-4f13-93b8-b58503ae86f0">
               <div class="row gy-4">
 
                 <div class="col-md-6">

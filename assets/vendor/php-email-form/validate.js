@@ -3,6 +3,8 @@
 * URL: https://bootstrapmade.com/php-email-form/
 * Author: BootstrapMade.com
 */
+
+
 (function () {
   "use strict";
 
@@ -49,6 +51,7 @@
     });
   });
 
+
   function php_email_form_submit(thisForm, action, formData) {
     fetch(action, {
       method: 'POST',
@@ -57,24 +60,59 @@
     })
     .then(response => {
       if( response.ok ) {
-        return response.text();
+        return response.json(); // Change to parse JSON
       } else {
         throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
       }
     })
     .then(data => {
       thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
+  
+      // Check if the response from Web3Forms indicates success
+      if (data.success) {  // Adjust based on Web3Forms response structure
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+        throw new Error(data.message || 'Form submission failed'); 
       }
     })
     .catch((error) => {
       displayError(thisForm, error);
     });
   }
+  
+
+
+
+
+
+
+  // function php_email_form_submit(thisForm, action, formData) {
+  //   fetch(action, {
+  //     method: 'POST',
+  //     body: formData,
+  //     headers: {'X-Requested-With': 'XMLHttpRequest'}
+  //   })
+  //   .then(response => {
+  //     if( response.ok ) {
+  //       return response.text();
+  //     } else {
+  //       throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
+  //     }
+  //   })
+  //   .then(data => {
+  //     thisForm.querySelector('.loading').classList.remove('d-block');
+  //     if (data.trim() == 'OK') {
+  //       thisForm.querySelector('.sent-message').classList.add('d-block');
+  //       thisForm.reset(); 
+  //     } else {
+  //       throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+  //     }
+  //   })
+  //   .catch((error) => {
+  //     displayError(thisForm, error);
+  //   });
+  // }
 
   function displayError(thisForm, error) {
     thisForm.querySelector('.loading').classList.remove('d-block');
@@ -83,3 +121,5 @@
   }
 
 })();
+
+
