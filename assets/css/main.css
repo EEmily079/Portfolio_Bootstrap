@@ -760,6 +760,21 @@ section,
     font-size: 18px;
   }
 }
+.btn{
+  color: white;
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+ 
+  margin-top: 30px;
+  
+}
 
 /*--------------------------------------------------------------
 # About Section
